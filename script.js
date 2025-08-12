@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
     // 1. Defineed all characters we want in our Dictionary.
-    const characterSet = 'abcdefghijklmnopqrstuvwxyz0123456789 .,!?\'"-()[]{}*';
+    const characterSet = 'abcdefghijklmnopqrstuvwxyz0123456789 .,!?\'"-()[]{}*&^%$#@~`_=+/<>;:';
 
     // 2. Initialize our Dictionary - First one is to tokenize and second is to detokenize
     const vocab = {};
@@ -14,7 +14,8 @@ document.addEventListener("DOMContentLoaded", () => {
         vocab[char] = token;
         reverseVocab[token] = char;
     }
-
+    console.log(vocab);
+    
 
     // Encoding Function - If anything not in dictonary it will return 0
     function encode(input) {
